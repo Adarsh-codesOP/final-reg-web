@@ -53,7 +53,7 @@ export function EventCard() {
   }, [videoUrl])
 
   return (
-    <Card className="relative group bg-card/70 border border-primary/30 transition-colors">
+    <Card className="relative group bg-card/70 border border-primary/30 transition-colors hover:shadow-[0_0_12px_2px_rgba(34,211,238,0.5)]">
       <div className="pointer-events-none absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 blur-xl bg-primary/10 transition" />
       <CardHeader>
         <CardTitle className="text-lg font-mono tracking-wide text-primary">{title}</CardTitle>

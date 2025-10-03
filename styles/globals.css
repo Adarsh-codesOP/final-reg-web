@@ -114,6 +114,24 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+.neon-border {
+  border: 1px solid cyan;
+  box-shadow:
+    0 0 5px cyan,
+    0 0 10px cyan,
+    0 0 20px cyan,
+    0 0 40px cyan;
+  transition: box-shadow 0.3s ease;
+}
+
+.neon-border:hover {
+  box-shadow:
+    0 0 10px cyan,
+    0 0 20px cyan,
+    0 0 40px cyan,
+    0 0 80px cyan;
+}
+
 
 @layer base {
   * {

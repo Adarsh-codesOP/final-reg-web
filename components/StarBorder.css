@@ -1,0 +1,38 @@
+.star-border-container {
+  display: inline-block;
+  position: relative;
+  border-radius: 20px;
+  overflow: visible; /* allow neon to show outside */
+}
+
+.border-gradient-bottom,
+.border-gradient-top {
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  opacity: 0.7;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.border-gradient-bottom {
+  bottom: -12px;
+  right: -250%;
+  animation: star-movement-bottom linear infinite alternate;
+  background: radial-gradient(circle, cyan, transparent 10%);
+}
+
+.border-gradient-top {
+  top: -12px;
+  left: -250%;
+  animation: star-movement-top linear infinite alternate;
+  background: radial-gradient(circle, cyan, transparent 10%);
+}
+
+.inner-content {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  background: transparent; /* let card show background */
+  border: none; /* remove solid inner border */
+}
