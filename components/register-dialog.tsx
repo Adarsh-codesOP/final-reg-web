@@ -205,8 +205,14 @@ export function RegisterDialog({ onClose }: { onClose: () => void }) {
             </div>
             <div className="mt-3">
               <Label htmlFor="txn">Transaction Number</Label>
-              <Input id="txn" value={txn} onChange={(e) => setTxn(e.target.value)} />
+              <Input
+                id="txn"
+                value={txn}
+                onChange={(e) => setTxn(e.target.value)}
+                placeholder="xxxx-xxxx-xxxx"
+              />
             </div>
+            
             <div className="mt-3">
               <Label htmlFor="proof">Upload Payment Proof</Label>
               <Input

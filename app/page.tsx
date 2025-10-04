@@ -32,19 +32,26 @@ function SiteHeader() {
             className="rounded-sm"
             priority
           />
-          <span className="font-mono text-sm tracking-wide text-muted-foreground">XL Pro Community</span>
+          <span className="font-mono text-sm tracking-wide text-muted-foreground">
+            XL Pro Community
+          </span>
         </div>
-        <nav className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
-          <a href="#about" className="hover:text-primary transition-colors">
-            About
-          </a>
-          <a href="#event" className="hover:text-primary transition-colors">
-            Event
-          </a>
-          <a href="#register" className="hover:text-primary transition-colors">
-            Register
-          </a>
-        </nav>
+        <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          <nav className="hidden md:flex items-center gap-6">
+            <a href="#about" className="hover:text-primary transition-colors">
+              About
+            </a>
+            <a href="#event" className="hover:text-primary transition-colors">
+              Event
+            </a>
+            <a href="#register" className="hover:text-primary transition-colors">
+              Register
+            </a>
+            <a href="#help" className="hover:text-primary transition-colors">
+              Help
+            </a>
+          </nav>
+        </div>
       </div>
     </header>
   )
@@ -57,7 +64,7 @@ function Hero() {
         <h1 className="text-pretty text-3xl md:text-5xl font-semibold">
           <TextType
             text={[
-           "XL Pro Developers",
+             "XL Pro Developers",
              "Build. Learn. Ship. Together",
              "Join Codeathon 2.0 – Compete & Collaborate"
             ]}
@@ -143,17 +150,39 @@ function AboutSection() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-4 py-10 text-center text-sm text-muted-foreground">
-        <div className="flex items-center justify-center gap-2">
-          <Image src="/placeholder-logo.svg" alt="" width={18} height={18} />
-          <span>XL Pro Community</span>
+    <>
+      {/* Help Section */}
+      <section
+        id="help"
+        className="max-w-6xl mx-auto px-4 py-4 bg-card border border-border rounded-md mt-10 text-center"
+      >
+        <h2 className="text-base font-semibold text-primary mb-1">Need Help?</h2>
+        <div className="flex justify-center gap-4 text-sm text-muted-foreground">
+          <a href="tel:8590900584" className="hover:text-primary transition-colors">
+            8590900584
+          </a>
+          <a href="tel:6362756437" className="hover:text-primary transition-colors">
+            6362756437
+          </a>
+          <a href="tel:8618587738" className="hover:text-primary transition-colors">
+            8618587738
+          </a>
         </div>
-        <p className="mt-2">
-          {"© "}
-          {new Date().getFullYear()} {" XL Pro. All rights reserved."}
-        </p>
-      </div>
-    </footer>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-border mt-6">
+        <div className="mx-auto max-w-6xl px-4 py-10 text-center text-sm text-muted-foreground">
+          <div className="flex items-center justify-center gap-2">
+            <Image src="/placeholder-logo.svg" alt="" width={18} height={18} />
+            <span>XL Pro Community</span>
+          </div>
+          <p className="mt-2">
+            {"© "}
+            {new Date().getFullYear()} {" XL Pro. All rights reserved."}
+          </p>
+        </div>
+      </footer>
+    </>
   )
 }
