@@ -8,9 +8,12 @@ import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "🚀 XL-Pro Community",
+  description: "Created by XL-Pro",
+  generator: "XL-Pro",
+  icons: {
+    icon: "https://xlfzqufxcfykxqrehyxa.supabase.co/storage/v1/object/public/extra/file%20(1).svg",
+  },
 }
 
 export default function RootLayout({
@@ -20,6 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark antialiased">
+      <head />
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>
           {children}
