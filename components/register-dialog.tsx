@@ -86,6 +86,7 @@ export function RegisterDialog({ onClose }: { onClose: () => void }) {
       if (!teamName || !theme || !teamSize) throw new Error("Please complete the form")
       if (members.some((m) => !m.name || !m.email || !m.phone)) throw new Error("Fill all member details")
       if (!txn) throw new Error("Transaction number required")
+      if (!proofFile && !proofUrl) throw new Error("Payment proof required")
 
       let finalProofUrl = proofUrl
       if (proofFile && !finalProofUrl) {
